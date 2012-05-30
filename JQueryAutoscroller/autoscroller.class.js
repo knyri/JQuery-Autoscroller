@@ -20,8 +20,15 @@ var AutoScroller=function(id,options){
 	t.scroll=function(){
 		bounce=false;
 		t.position+=t.options.increment*t.dir;
-		if(t.dir==1 && t.position>t.scrollheight){t.position=t.scrollheight;t.dir=-1;bounce=true;}
-		else if(t.dir==-1 && t.position<0){t.position=0;t.dir=1;bounce=true;}
+		if(t.dir==1 && t.position>t.scrollheight){
+			t.position=t.scrollheight;
+			t.dir=-1;
+			bounce=true;
+		}else if(t.dir==-1 && t.position<0){
+			t.position=0;
+			t.dir=1;
+			bounce=true;
+		}
 		t.$scrollpane.scrollTop(t.position);
 		if(bounce)
 			t.timer=setTimeout(t.scroll,t.options.bouncepause);
@@ -29,10 +36,12 @@ var AutoScroller=function(id,options){
 			t.timer=setTimeout(t.scroll,t.options.speed);
 	};
 	t.start=function(){
-		t.timer=setTimeout(t.scroll,t.options.speed);
+		if(t.timer==null)
+			t.timer=setTimeout(t.scroll,t.options.speed);
 	};
 	t.stop=function(){
 		clearTimeout(t.timer);
+		t.timer=null;
 	};
 	if(t.options.pauseonhover==true){
 		t.$scrollpane.hover(t.stop,t.start);
