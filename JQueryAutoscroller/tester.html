@@ -9,86 +9,78 @@ body>div{float:left;border:2px solid #ccc}
 .testimonials blockquote{font-style:italic;text-align:justify;margin-top:100px;margin:0}
 .testimonials blockquote:before,.testimonials blockquote:after{content:'"'}
 .testimonials blockquote:first-child{margin-top:0}
-.testimonials blockquote+p{text-align:right}
+.testimonials blockquote+p{text-align:right;margin:10px 0}
 .testimonials blockquote+p:before{content:'-'}
 .testimonials blockquote+p:first-line{font-weight:700}
 
-.testimonials >div>div{margin-bottom:100px}
+.testimonials .scrollpane>div {padding:1px 0}
+
+/* .testimonials >div>div{margin-bottom:100px} */
 </style>
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 <script type="text/javascript" src="autoscroller.class.js"></script>
 <script type="text/javascript">$(document).ready(function(){
-	new AutoScroller('testimonials',{speed:60}).start();
-	new AutoScroller('testimonials2',{speed:60,type:'infinite'}).start();
+	new AutoScroller('bouncy',{speed:60}).start();
+	new AutoScroller('infinite',{speed:60,type:'infinite'}).start();
 });</script>
 </head>
 <body>
 <div>
 Bounce Effect
-<div id="testimonials" class="testimonials">
-	<blockquote>Cira is a pleasure to work with and produces quality work. Because of her diverse expertise in voicing, she can complete many of my projects for me. She's truly remarkable!</blockquote>
+<div id="bouncy" class="testimonials">
+	<blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</blockquote>
 	<p>
-		Justyne Dickson<br />
-		Commercials On Hold
+		John Guy
 	</p>
-	<blockquote>Cira is a pleasure to work with and produces quality work. Because of her diverse expertise in voicing, she can complete many of my projects for me. She's truly remarkable!</blockquote>
+	<blockquote>Vestibulum laoreet vestibulum pharetra. Curabitur imperdiet tincidunt nulla, at condimentum dolor scelerisque nec. In rutrum egestas eros, eget rhoncus nulla fringilla in. Suspendisse vel lectus tortor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut et sollicitudin lacus. Donec viverra hendrerit tincidunt.</blockquote>
 	<p>
-		Justyne Dickson<br />
-		Commercials On Hold
+		Justyne Jones
 	</p>
-	<blockquote>Cira is a pleasure to work with and produces quality work. Because of her diverse expertise in voicing, she can complete many of my projects for me. She's truly remarkable!</blockquote>
+	<blockquote>Integer nunc turpis, porttitor at enim sit amet, congue dignissim lectus. Fusce lacinia mi laoreet diam aliquam, sit amet porta dolor tincidunt. Proin tellus nisi, bibendum eu ullamcorper at, malesuada eu est. In vehicula mauris sapien, faucibus mollis eros suscipit ac. Pellentesque sit amet sodales ligula. Quisque dictum ullamcorper lacus. Etiam iaculis non quam rhoncus dictum. Ut id pellentesque nunc.</blockquote>
 	<p>
-		Justyne Dickson<br />
-		Commercials On Hold
+		Larry Gaffer
 	</p>
-	<blockquote>Cira is a pleasure to work with and produces quality work. Because of her diverse expertise in voicing, she can complete many of my projects for me. She's truly remarkable!</blockquote>
+	<blockquote>Aliquam rutrum tincidunt lacinia. Cras quis tellus at mi consectetur molestie. Nam ornare purus ipsum, et accumsan metus mattis vel. Etiam eu elit a tellus malesuada tristique. Sed sit amet maximus elit. Praesent at dui nec arcu accumsan sodales vel dignissim tortor. Sed ornare velit eget lorem convallis, sit amet fermentum odio mollis. Maecenas dictum leo id mi accumsan, quis ultrices quam bibendum. Nulla lorem nibh, tempor sed turpis a, varius consectetur est. Mauris tincidunt bibendum sollicitudin.</blockquote>
 	<p>
-		Justyne Dickson<br />
-		Commercials On Hold
+		Vera Hall
 	</p>
-	<blockquote>Cira is a pleasure to work with and produces quality work. Because of her diverse expertise in voicing, she can complete many of my projects for me. She's truly remarkable!</blockquote>
+	<blockquote>Proin egestas urna sed quam interdum vehicula. Duis sagittis nulla vel dui ultrices, a elementum eros aliquam. Morbi pharetra augue commodo rutrum volutpat. Vivamus quis faucibus urna, sed rhoncus lectus. Aliquam ullamcorper enim vitae arcu gravida fringilla. Nulla vitae volutpat leo. Morbi commodo ipsum iaculis urna hendrerit ornare. Duis est justo, dignissim et lacus a, consectetur dignissim nunc. Pellentesque venenatis.</blockquote>
 	<p>
-		Justyne Dickson<br />
-		Commercials On Hold
+		Mary Klein
 	</p>
 </div>
 </div>
 <div>
 Infinite Scroll. Note the different set-up. These extra DIVs in the mark-up are required.
-<div id="testimonials2" class="testimonials">
+<div id="infinite" class="testimonials">
 	<div>
-		<blockquote>First quote. Cira is a pleasure to work with and produces quality work. Because of her diverse expertise in voicing, she can complete many of my projects for me. She's truly remarkable!</blockquote>
+		<blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</blockquote>
 		<p>
-			Justyne Dickson<br />
-			Commercials On Hold
+			John Guy
 		</p>
 	</div>
 	<div>
-		<blockquote>Cira is a pleasure to work with and produces quality work. Because of her diverse expertise in voicing, she can complete many of my projects for me. She's truly remarkable!</blockquote>
+		<blockquote>Vestibulum laoreet vestibulum pharetra. Curabitur imperdiet tincidunt nulla, at condimentum dolor scelerisque nec. In rutrum egestas eros, eget rhoncus nulla fringilla in. Suspendisse vel lectus tortor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut et sollicitudin lacus. Donec viverra hendrerit tincidunt.</blockquote>
 		<p>
-			Justyne Dickson<br />
-			Commercials On Hold
+			Justyne Jones
 		</p>
 	</div>
 	<div>
-		<blockquote>Cira is a pleasure to work with and produces quality work. Because of her diverse expertise in voicing, she can complete many of my projects for me. She's truly remarkable!</blockquote>
+		<blockquote>Integer nunc turpis, porttitor at enim sit amet, congue dignissim lectus. Fusce lacinia mi laoreet diam aliquam, sit amet porta dolor tincidunt. Proin tellus nisi, bibendum eu ullamcorper at, malesuada eu est. In vehicula mauris sapien, faucibus mollis eros suscipit ac. Pellentesque sit amet sodales ligula. Quisque dictum ullamcorper lacus. Etiam iaculis non quam rhoncus dictum. Ut id pellentesque nunc.</blockquote>
 		<p>
-			Justyne Dickson<br />
-			Commercials On Hold
+			Larry Gaffer
 		</p>
 	</div>
 	<div>
-		<blockquote>Cira is a pleasure to work with and produces quality work. Because of her diverse expertise in voicing, she can complete many of my projects for me. She's truly remarkable!</blockquote>
+		<blockquote>Aliquam rutrum tincidunt lacinia. Cras quis tellus at mi consectetur molestie. Nam ornare purus ipsum, et accumsan metus mattis vel. Etiam eu elit a tellus malesuada tristique. Sed sit amet maximus elit. Praesent at dui nec arcu accumsan sodales vel dignissim tortor. Sed ornare velit eget lorem convallis, sit amet fermentum odio mollis. Maecenas dictum leo id mi accumsan, quis ultrices quam bibendum. Nulla lorem nibh, tempor sed turpis a, varius consectetur est. Mauris tincidunt bibendum sollicitudin.</blockquote>
 		<p>
-			Justyne Dickson<br />
-			Commercials On Hold
+			Vera Hall
 		</p>
 	</div>
 	<div>
-		<blockquote>Last quote. Cira is a pleasure to work with and produces quality work. Because of her diverse expertise in voicing, she can complete many of my projects for me. She's truly remarkable!</blockquote>
+		<blockquote>Proin egestas urna sed quam interdum vehicula. Duis sagittis nulla vel dui ultrices, a elementum eros aliquam. Morbi pharetra augue commodo rutrum volutpat. Vivamus quis faucibus urna, sed rhoncus lectus. Aliquam ullamcorper enim vitae arcu gravida fringilla. Nulla vitae volutpat leo. Morbi commodo ipsum iaculis urna hendrerit ornare. Duis est justo, dignissim et lacus a, consectetur dignissim nunc. Pellentesque venenatis.</blockquote>
 		<p>
-			Justyne Dickson<br />
-			Commercials On Hold
+			Mary Klein
 		</p>
 	</div>
 </div>

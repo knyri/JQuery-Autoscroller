@@ -11,25 +11,26 @@
  * If using type:'infinite' then all the children need to be in DIV elements.
  * @author Kenneth Pierce
  */
+
 var AutoScroller=function(id,options){
-	var t=this,bounce=false;
+	var t=this;
 	t.$scrollpane=$('#'+id);
 	t.options={speed:100,increment:1,pauseonhover:true,bouncepause:500,type:'bounce'};
 	t.position=0;
 	t.dir=1;
 	if(options)$.extend(t.options,options);
-	if(t.options.type=='bounce'){t.options.type=0;}
-	else if(t.options.type=='infinite'){t.options.type=1;}
-	t.$scrollpane=t.$scrollpane.wrapInner($('<div class="scrollpane" />'));
-	t.$scrollcontent=t.$scrollpane.children('div:first-child');
-	if(t.options.type==0)
-		t.scrollheight=$(t.$scrollpane.find('div.scrollpane').get(0)).height()-t.$scrollpane.height();
-	else if(t.options.type==1)
-		t.scrollheight=t.$scrollcontent.find('div:first-child').outerHeight(true);
+	switch(t.options.type){
+		case 'bounce':
+			t.options.type=0;
+			break;
+		case 'infinite':
+			t.options.type=1;
+			break;
+	}
 	t.scroll=function(){
-		bounce=false;
 		t.position+=t.options.increment*t.dir;
 		if(t.options.type==0){
+			var bounce=false;
 			if(t.dir==1 && t.position>t.scrollheight){
 				t.position=t.scrollheight;
 				t.dir=-1;
@@ -65,6 +66,13 @@ var AutoScroller=function(id,options){
 		clearTimeout(t.timer);
 		t.timer=null;
 	};
+
+	t.$scrollpane=t.$scrollpane.wrapInner($('<div class="scrollpane"></div>'));
+	t.$scrollcontent=t.$scrollpane.children('div:first-child');
+	if(t.options.type==0)
+		t.scrollheight=$(t.$scrollpane.find('div.scrollpane').get(0)).height()-t.$scrollpane.height();
+	else if(t.options.type==1)
+		t.scrollheight=t.$scrollcontent.find('div:first-child').outerHeight(true);
 	if(t.options.pauseonhover==true){
 		t.$scrollpane.hover(t.stop,t.start);
 	}
